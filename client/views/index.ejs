@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose (Wolf) Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Here Comes the Wolf Pack!</h1>
+            <% for (var x in info) { %>
+            <p class="lead">
+                <p>Name: "<%= info[x].name %>"</p>
+                <p>Age: <%= info[x].age %></p>
+                <p>Added on <%= info[x].createdAt.toLocaleString('en-US', {timeZone: "America/Los_Angeles"}) %></p>
+                <p>Last Updated on <%= info[x].updatedAt.toLocaleString('en-US', {timeZone: "America/Los_Angeles"}) %></p>
+                <a href="/wolves/<%=info[x]._id%>">View Wolf</a> |
+                <a href="/wolves/edit/<%=info[x]._id%>">Edit Wolf</a>
+                <hr class="my-4">
+            </p>
+            <% } %>
+            <a href="/wolves/new">Add a Wolf to the Pack</a>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+</html>

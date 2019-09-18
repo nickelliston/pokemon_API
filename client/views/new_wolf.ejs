@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Wolf Addition</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="card align-items-center">
+        <h4 class="card-title">Add a New Wolf</h4>
+        <div class="card-body">
+            <form action='/wolves' method='post'>
+                <div class="form-group row">
+                    <div class="col-xs-2">
+                        <p>Name: <input type="text" class="form-control" name="name"></p>
+                        <p>Age: <input type="number" class="form-control" name="age"></p>
+                        <input type="submit" class="btn btn-secondary" value="Add New Wolf">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
